@@ -11,35 +11,28 @@ const chores = [
     {name: "Yard Work", description: "Mow The Lown", completed: false, _id: uuid()}
 ]
 
+
 todoListRouter.get("/", (req, res) => {
     res.send(chores)
 })
-
-
-todoListRouter.get("/:choreId", (req, res) => {
+.get("/:choreId", (req, res) => {
     const choreId = req.params.choreId
     const foundChore = chores.find(chore => chore._id === choreId);
     res.send(foundChore)
 })
-
-
-todoListRouter.post("/", (req, res) => {
+.post("/", (req, res) => {
     const newChore = req.body
     newChore._id = uuid()
     chores.push(newChore)
     res.send(`Successfully added ${newChore.name} to chore list!`)
 })
-
-
-todoListRouter.put("/:choreId", (req, res) => {
+.put("/:choreId", (req, res) => {
     const choreId = req.params.choreId
     const choreIndex = chores.findIndex(chore => chore._id === choreId)
     const updatedChore = Object.assign(chores[choreIndex], req.body)
     res.send(updatedChore)  
 })
-
-
-todoListRouter.delete("/:choreId", (req, res) => {
+.delete("/:choreId", (req, res) => {
     const choreId = req.params.choreId;
     const choreIndex = chores.findIndex(chore => chore._id === choreId);
     const choreName = chores[choreIndex].name;
