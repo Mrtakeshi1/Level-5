@@ -27,6 +27,9 @@ function modifyItems (req, res, next) {
 }
 
 
+
+
+
 app.get('/items', modifyItems, (req, res, next) => {
     console.log("GET REQUEST RECEIVED");
     const items = [
