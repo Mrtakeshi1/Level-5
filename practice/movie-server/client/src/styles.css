@@ -46,6 +46,12 @@ button {
 }
 
 
+.edit-btn {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+
 .movie-container {
     display: flex;
     flex-direction: column;
