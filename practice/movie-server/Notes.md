@@ -27,3 +27,15 @@
     * Begins with the "?"
     * Built of key=value pairs
     * Multiple queries separated by the "&" 
+
+
+# Console Errors in Express
+
+  # Use A Logger 
+    * npm install morgan
+
+
+# Connecting the Front-end to the Back-end
+
+  # Folder Structure
+  # Proxy
