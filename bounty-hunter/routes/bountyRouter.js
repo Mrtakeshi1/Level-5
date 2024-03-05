@@ -1,13 +1,7 @@
 const express = require('express');
 const bountyRouter = express.Router();
 const { v4: uuid } = require('uuid');
-
-const bounties = [
-    { name: "Darth Andeddu", living: true, bounty: 50000, type: "Sith", _id: uuid() },
-    { name: "Obi-Wan Kenobi", living: true, bounty: 2000, type: "Jedi", _id: uuid() },
-    { name: "Darth Sidious", living: true, bounty: 10000, type: "Sith", _id: uuid() },
-    { name: "Qui-Gon Jinn", living: true, bounty: 3000, type: "Jedi", _id: uuid() }
-];
+const bounties = require('./bountyData');
 
 
 // GET all bounties

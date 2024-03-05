@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0px;
+    color: darkgoldenrod;
+}
+
+
+body {
+    background-image: url(https://i.pinimg.com/originals/68/31/45/6831454cf213ed7ffa541fe666fa9cf8.gif);
+    background-repeat: no-repeat;
+    background-size: 1880px 980px;
+}
+
+
+h1 {
+    margin: 5px;
+    padding-left: 5px;
+}
+
+
+h3 {
+    margin: 5px;
+    padding-left: 30px;
+}
+
+
+form {
+    border: 3px solid black;
+    padding: 10px;
+    margin: 5px;
+    background-color: whitesmoke;
+    opacity: 85%;
+}
+
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 5px;
+    color: black;
+}
+
+
+button {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    font: 16px;
+    color: black;
+}
+
+
+.delete-btn {
+    background-color: firebrick;
+    color: whitesmoke;
+}
+
+
+.edit-btn {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+
+.bounty-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+}
+
+
+.bounty {
+    border: 3px solid black;
+    padding: 10px;
+    margin: 5px;
+    background-color: whitesmoke;
+    opacity: 85%;
+}
