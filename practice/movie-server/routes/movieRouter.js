@@ -16,16 +16,24 @@ movieRouter.get("/", (req, res) => {
 
 
 // Get One //
-movieRouter.get("/:movieId", (req, res) => {
+movieRouter.get("/:movieId", (req, res, next) => {
     const movieId = req.params.movieId
     const foundMovie = movies.find(movie => movie._id === movieId)
+    if (!foundMovie) {
+        const error = new Error(`The item with id ${movieId} was not found.`)
+        return next(error)
+    }
     res.send(foundMovie)
 })
 
 
 // Get by genre
-movieRouter.get("/search/genre", (req, res) => {
+movieRouter.get("/search/genre", (req, res, next) => {
     const genre = req.query.genre
+    if (!genre) {
+        const error = new Error("You must provide a genre")
+        return next(error)
+    }
     const filterMovies = movies.filter(movie => movie.genre === genre)
     res.send(filterMovies)
 })

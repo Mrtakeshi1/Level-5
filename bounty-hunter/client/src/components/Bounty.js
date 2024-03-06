@@ -3,15 +3,18 @@ import BountyForm from './BountyForm'
 
 
 function Bounty(props){
-    const { name, living, bounty, _id } = props
+    const { name, living, bounty, type, _id } = props
     const [editToggle, setEditToggle] = useState(false)
+
+
     return (
         <div className="bounty">
             { !editToggle ?
             <>
-                <h1>Title: { name }</h1>
-                <h3>living: { living }</h3>
-                <h3>bounty: { bounty }</h3>
+                <h1>Name: { name }</h1>
+                <h3>Living: { living ? "Alive" : "Dead" }</h3>
+                <h3>Bounty: { bounty }</h3>
+                <h3>Type: { type }</h3>
                 <button 
                     className="delete-btn"
                     onClick={() => props.deleteBounty(_id)}>
@@ -29,11 +32,13 @@ function Bounty(props){
                     name= {name}
                     living= {living}
                     bounty = {bounty}
+                    type = {type}
                     _id={_id}
                     btnText="Submit Edit"
                     submit={props.editBounty}
                 />
                 <button
+                    className="close-btn"
                     onClick={() => setEditToggle(prevToggle => !prevToggle)}>
                     Close
                 </button>

@@ -11,11 +11,27 @@ bountyRouter.get("/", (req, res) => {
 
 
 // GET a specific bounty by ID //
-bountyRouter.get("/:bountyId", (req, res) => {
+bountyRouter.get("/:bountyId", (req, res, next) => {
     const bountyId = req.params.bountyId
     const foundBounty = bounties.find(bounty => bounty._id === bountyId)
+    if (!foundBounty) {
+        const error = new Error(`The item with id ${bountyId} was not found`)
+        return next(error)
+    }
     res.send(foundBounty)
 });
+
+
+// Get by type
+bountyRouter.get("/search/type", (req, res, next) => {
+    const type = req.query.type
+    if (!type) {
+        const error = new Error("You must provide a type")
+        return next(error)
+    }
+    const filterBounties = bounties.filter(bounty => bounty.type === type)
+    res.send(filterBounties)
+})
 
 
 // POST a new bounty

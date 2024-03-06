@@ -4,7 +4,8 @@ function BountyForm(props) {
     const initInputs = { 
     name: props.name || "", 
     living: props.living || "",
-    bounty: props.bounty || ""
+    bounty: props.bounty || "",
+    type: props.type || ""
     }
 const [inputs, setInputs] = useState(initInputs)
 
@@ -13,7 +14,7 @@ function handleChange(e) {
     setInputs(prevInputs => ({...prevInputs, [name]: value}))
     }
 
-function handleSubmit(e) {
+function handleSubmit (e) {
     e.preventDefault()
     props.submit(inputs, props._id)
     setInputs(initInputs)
@@ -42,7 +43,14 @@ return (
             onChange={handleChange} 
             placeholder="Bounty"/>
 
-        <button>{ props.btnText }</button>
+        <input 
+            type="text" 
+            name="type" 
+            value={inputs.type} 
+            onChange={handleChange} 
+            placeholder="Type"/> 
+
+        <button className="add-btn" >{ props.btnText }</button>
 
     </form>
     )

@@ -11,7 +11,7 @@ function App() {
   function getBounty() {
       axios.get("/bounty")
       .then(res => setBounty(res.data))
-      .catch(err => console.error(err))
+      .catch(err => console.error(err.response.data.errMsg))
   }
 
   function addBounty(newBounty) {

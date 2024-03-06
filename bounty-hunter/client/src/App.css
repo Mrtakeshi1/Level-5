@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0px;
     color: darkgoldenrod;
+    cursor: url(https://cur.cursors-4u.net/others/oth-1/oth28.cur), auto !important;
 }
 
 
@@ -38,19 +39,40 @@ form {
 input {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 8px;
     margin: 5px;
     color: black;
 }
 
 
+input:hover {
+    background-color: transparent; 
+}
+
+
 button {
-    margin-top: 5px;
+    margin-top: 23px;
     padding: 5px;
     border-radius: 4px;
     font: 16px;
     color: black;
+    margin-right: -22px;
+    margin-left: 30px;
+}
+
+
+button:hover {
+    background-color: lightslategray; 
+    color: whitesmoke;
+
+}
+
+
+.add-btn {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    margin-left: 12px;
 }
 
 
@@ -62,6 +84,12 @@ button {
 
 .edit-btn {
     background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+
+.close-btn {
+    background-color: firebrick;
     color: whitesmoke;
 }
 
@@ -78,5 +106,5 @@ button {
     padding: 10px;
     margin: 5px;
     background-color: whitesmoke;
-    opacity: 85%;
+    opacity: 87%;
 }
