@@ -9,6 +9,7 @@ const movieSchema = new Schema ({
     },
     genre : {
         type: String,
+        enum: ['action', 'fantasy', 'horror'],
         required: true
     },
     releaseYear: Number
