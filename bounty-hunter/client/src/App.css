@@ -11,7 +11,7 @@
 body {
     background-image: url(https://i.pinimg.com/originals/68/31/45/6831454cf213ed7ffa541fe666fa9cf8.gif);
     background-repeat: no-repeat;
-    background-size: 1880px 980px;
+    background-size: 1880px 1700px;
 }
 
 
@@ -107,4 +107,9 @@ button:hover {
     margin: 5px;
     background-color: whitesmoke;
     opacity: 87%;
+}
+
+
+.filter-form {
+    width: 200px;
 }
